@@ -5,6 +5,7 @@ using HarmonyLib;
 namespace Hat
 {
     [BepInPlugin(PluginInfo.PLUGIN_GUID, PluginInfo.PLUGIN_NAME, PluginInfo.PLUGIN_VERSION)]
+    [BepInDependency("ch.offbeatwit.baboonapi.plugin", "2.1.0")]
     public class Plugin : BaseUnityPlugin
     {
         private Harmony _harmony = new(PluginInfo.PLUGIN_GUID);
