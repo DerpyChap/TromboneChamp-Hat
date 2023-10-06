@@ -1,0 +1,10 @@
+{
+    "name": "Hat",
+    "description": "Hat.",
+    "version_number": "1.0.0",
+    "dependencies": [
+      "BepInEx-BepInExPack_TromboneChamp-5.4.21",
+      "TromboneChamps-BaboonAPI-2.4.1"
+    ],
+    "website_url": "https://github.com/DerpyChap/TromboneChamp-Hat"
+}

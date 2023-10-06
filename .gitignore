@@ -399,3 +399,6 @@ FodyWeavers.xsd
 
 # macOS metadata
 .DS_Store
+
+# Ignore exported zip files
+*.zip

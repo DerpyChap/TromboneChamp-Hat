@@ -30,4 +30,15 @@
   <ItemGroup>
     <PackageReference Include="TromboneChamp.GameLibs" Version="1.14.0" />
   </ItemGroup>
+
+  <Target Name="ThunderstoreZip" AfterTargets="Build" Condition="'$(Configuration)' == 'Release'">
+    <Delete Files="$(OutDir)thunderstore" />
+    <Delete Files="$(SolutionDir)$(ProjectName)-thunderstore.zip" />
+    <Copy SourceFiles="icon.png" DestinationFolder="$(OutDir)thunderstore" />
+    <Copy SourceFiles="manifest.json" DestinationFolder="$(OutDir)thunderstore" />
+    <Copy SourceFiles="README.md" DestinationFolder="$(OutDir)thunderstore" />
+    <Copy SourceFiles="CHANGELOG.md" DestinationFolder="$(OutDir)thunderstore" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(OutDir)thunderstore" />
+    <ZipDirectory DestinationFile="$(SolutionDir)$(ProjectName)-thunderstore.zip" SourceDirectory="$(OutDir)thunderstore" />
+  </Target>
 </Project>
